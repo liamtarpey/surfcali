@@ -10,7 +10,7 @@
 	<style type="text/css">
 		<!--
 		body {background: #02a6af;}
-		@media only screen and (min-width : 500px) { 
+		@media only screen and (min-width : 700px) { 
 			body {background: url(assets/img/<?php echo $selectedBg; ?>) no-repeat center center fixed;}
 		} -->
 	</style>
@@ -95,9 +95,9 @@
 	<input id="menu-toggle" class="menu-toggle" type="checkbox"></input>
 	<div class="credits">
 		<label for="menu-toggle" id="toggle" class="toggle-credits"><span>credits</span></label> 
-		<span>site by <a href="http://www.liamtarpey.com" target="_blank">Liam Tarpey</a></span>
-		<span>api: <a href="http://www.spitcast.com/" target="_blank">Spitcast</a></span>
-		<span>logo font: <a href="http://fontfabric.com/nexa-free-font/" target="_blank">Nexa Bold</a></span>
+		<span>site by <a href="http://www.liamtarpey.com">Liam Tarpey</a></span>
+		<span>api: <a href="http://www.spitcast.com/">Spitcast</a></span>
+		<span>logo font: <a href="http://fontfabric.com/nexa-free-font/">Nexa Bold</a></span>
 	</div>
 
 	<script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
