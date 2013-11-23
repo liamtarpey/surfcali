@@ -7,7 +7,7 @@ Currently hosted at: http://surfcali.liamtarpey.com
 
 This project makes use of the following:
 
-* Newly built plugin (surfcali.js) that pulls weather reports from the below
+* Newly built plugin (jquery-surfcali.js) that pulls weather reports from the below
 * Spitcast API (Surf reports from various Californian locations)
 * Overscroll (jQuery plugin)
 
