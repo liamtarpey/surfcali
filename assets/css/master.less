@@ -1,0 +1,402 @@
+/********************************************
+ BROWSER RESET
+********************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,
+b, u, i, center,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {	border-collapse: collapse;	border-spacing: 0;}
+
+/*********************************************
+ COLORS
+*********************************************/
+@blue: #02a6af;
+@black: #242424;
+@red: #EB1C45;
+@orange: #FF7701;
+@white: #f9f9f9;
+
+/*********************************************
+ LESS
+*********************************************/
+.rounded-corners (@radius: 3px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+       -o-border-radius: @radius;
+          border-radius: @radius;
+}
+.transition (@prop: all, @time: .2s, @ease: ease-in-out) {
+    -webkit-transition: @prop @time @ease;
+       -moz-transition: @prop @time @ease;
+        -ms-transition: @prop @time @ease;
+         -o-transition: @prop @time @ease;
+            transition: @prop @time @ease;
+}
+.rotate (@deg: 450deg) {
+	-webkit-transform: rotate(@deg);
+	   -moz-transform: rotate(@deg);
+        -ms-transform: rotate(@deg);
+         -o-transform: rotate(@deg);
+            transform: rotate(@deg); 
+}
+.bg-size {
+	-webkit-background-size: cover;
+       -moz-background-size: cover; 
+         -o-background-size: cover; 
+            background-size: cover; 
+            background-attachment: fixed;
+}
+.font-size(@rem: 1.5rem; @px: 15px;) {
+	font-size: @rem;
+	font-size: @px;
+}
+
+/*********************************************
+ MAIN SETUP
+*********************************************/
+::selection {
+	background: @blue;
+	color: #FFF;
+}
+:focus {
+	outline: none;
+}
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+html, body{
+	height: 100%;
+}
+html, body {
+	overflow: visible;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	font-family: 'Open Sans', 'Verdana', 'Arial', sans-serif;
+	.font-size;
+	font-weight: 300;
+	position: relative;
+	border-top: 1px solid @blue;
+	.bg-size;
+	width: 100%;
+}
+
+/*******************************************
+ COMMON STYLES
+*********************************************/
+.inline {display: inline-block;}
+.block {display: block;}
+.padding {padding: 10px;}
+.paddding-top {padding: 10px 0 0 0;}
+.padding-btm {padding: 0 0 10px 0;}
+.padding-tb {padding: 10px 0;}
+.hidden {display: none;}
+.clearfix {clear: both;}
+.margin-btm {margin: 0 0 15px 0;}
+.header-margin {
+	display: block;
+	margin: 0 0 80px 0;
+}
+
+
+/********************************************
+ TYPOGRAPHY
+*********************************************/
+h2 {
+	.font-size(2.4rem; 24px;);
+	line-height: 1;
+	padding-bottom: 3px;
+}
+h3 {
+	.font-size(1.8rem; 18px;);
+	line-height: 1;
+	padding-bottom: 3px;
+}
+p {
+	padding: 0 0 15px 0;
+	line-height: 1.5;
+}
+a,
+label {
+	text-decoration: none;
+	color: @orange;
+	.transition;
+}
+a {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+/*--------- HEADER -----------*/
+
+header.new-logo {
+	border-bottom: 3px solid @orange;
+	width: 170px;
+	padding: 10px 0 5px 20px;
+	margin-bottom: 20px;
+	z-index: 2;
+	position: static;
+	.transition;
+	.logo {
+		height: 33px;
+		background: url(../img/logo.png) no-repeat;
+		background-size: 150px 33px;
+		display: block;
+		text-indent: -9999px;
+	}
+}
+
+/*******************************************
+ MAIN
+*******************************************/
+.main-wrapper {
+	position: static;
+	width: 100%;
+	z-index: 1;
+	height: auto;
+}
+.map {
+	height: auto;
+	width: 100%;
+	max-width: 754px;
+	float: none;
+	position: relative;
+	overflow: hidden;
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 1146px;
+		height: 2000px;
+		display: none;
+		overflow: auto;
+	}
+	.nav {
+		position: static;
+		background: rgba(255, 255, 255, .5);
+		padding: 20px;
+		li {
+			position: static;
+			margin-bottom: 7px;
+			width: 200px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:before {
+				content:'';
+				width: 10px;
+				height: 10px;
+				background: @orange;
+				border-radius: 5px;
+				display: inline-block;
+				margin-right: 5px;
+			}
+			a {
+				&:hover {
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+.beach {
+	background: rgba(255, 255, 255, .7);
+	padding: 20px;
+	line-height: 1.5;
+	position: static;
+	width: 100%;
+	&:not(:target) {
+		display: none
+	} 
+	&:target {
+		display: block;
+	}
+	ul {
+		li {
+			padding-bottom: 3px;
+			text-indent: 4px;
+			&.date {
+				color: @orange;
+				.font-size(1.3rem; 13px;);
+				padding-bottom: 5px;
+				text-indent: 0;
+			}
+		}
+	}
+	.forecast-general {
+		border-bottom: 1px solid rgba(255,255,255,.3);
+		padding-bottom: 5px;
+		margin-bottom: 5px;
+	}
+}
+.drag {
+	display: none;
+	background: rgba(2, 166, 175, .5);
+	padding: 3px 20px 3px 0;
+	position: fixed;
+	bottom: 50px;
+	left: 0;
+	height: 24px;
+	&:after {
+		content: '';
+		width: 0; 
+		height: 0;
+		border-top: 12px solid transparent;
+		border-bottom: 12px solid transparent; 
+		border-left: 12px solid rgba(2, 166, 175, .5); 
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		right: -12px;
+	}
+	span {
+		color: @white;
+		display: block;
+		padding: 1px 0 2px 5px;
+	}
+}
+
+.credits {
+	background: rgba(255, 255, 255, .8);
+	padding: 20px;
+	position: static;
+	z-index: 4;
+	.font-size(1.2rem; 12px;);
+	.transition;
+	span {
+		display: block;
+		margin-bottom: 4px;
+	}
+	.toggle-credits {
+		position: absolute;
+		bottom: 0;
+		left: -48px;
+		padding: 5px 5px 0 5px;
+		background: rgba(255, 255, 255, .8);
+	}
+}
+.menu-toggle {
+	display: none;
+}
+#menu-toggle:checked ~ .credits {
+  right: 0; }
+
+/*----------- MEDIA QUERIES --------------*/
+@media only screen and (min-width : 500px) { 
+	html, body {
+		overflow:hidden;
+	}
+	header.new-logo {
+		border-bottom: 3px solid @blue;
+		width: 301px;
+		padding: 20px 20px 10px 0;
+		margin-bottom: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		.logo {
+			height: 62px;
+			background-size: 282px 62px;
+		}
+		&:hover {
+			width: 321px;
+		}
+	}
+	.map {
+		float: left;
+		height: 100%;
+		width: 60%;
+		.nav {
+			position: absolute;
+		 	top: 110px;
+			left: 0;
+		}
+	}
+	.main-wrapper {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	}
+	.beach {
+		position: absolute;
+		top: 110px;
+		right: 0;
+		width: 52%;
+		padding: 10px;
+	}
+	.credits {
+		position: absolute;
+		bottom: 0;
+		right: -150px;
+	}
+}
+
+@media only screen and (min-width : 800px) { 
+	
+	.map {
+		img {
+			display: block;
+		}
+		.nav {
+			top: 0;
+			left: 0;
+			background: none;
+			padding: 0;
+			li {
+				position: absolute;
+				width: 200px;
+				margin-bottom: 0;
+				a {
+					&:hover {
+						padding-left: 10px;
+					}
+				}
+			}
+		}
+	}
+	.beach {
+		width: 40%;
+		padding: 20px;
+	}
+	.drag {
+		display: block;
+	}
+
+
+	.mavericks {top: 828px;left: 103px;}
+	.steamer-lane {top: 944px;left: 148px;}
+	.salinas {top: 987px;left: 164px}
+	.san-simeon-creek {top: 1236px;left: 204px;}
+	.pismo-beach-pier {top: 1328px;left: 243px;}
+	.little-rincon {top: 1482px;left: 347px;}
+	.malibu {top: 1580px;left: 457px;}
+	.venice {top: 1630px;left: 503px;}
+	.cabrillo-beach {top: 1656px;left: 515px;}
+	.huntington-beach {top: 1682px;left: 565px;}
+	.newport-pier {top: 1713px;left: 590px;}
+	.oceanside-pier {top: 1769px;left: 624px;}
+	.mission-beach {top: 1875px;left: 642px;}
+}
