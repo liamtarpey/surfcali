@@ -11,15 +11,16 @@ This project makes use of the following:
 * Spitcast API (Surf reports from various Californian locations)
 * Overscroll (jQuery plugin)
 
-The site is fully responsive and uses HTML(5) & LESS (CSS3)
+The site is fully responsive and uses HTML(5) & LESS (CSS3), background-image randomizes on refresh between 10 seperate images. 
 
-Known bugs to be fixed in next edition: 
+Next update: 
 
-* Scrollbars appear when map is moved
-* Clicking on link adds '#beach' to URL
-* If '#beach' is in URL and page is refreshed, empty div is shown
-* No font-icons for report list - need to source appropriate icons
+* Scrollbars won't appear when map is moved
+* Clicking on link wont add '#beach' to URL
+* If '#beach' is in URL and page is refreshed, empty div won't be shown
+* Font-icons for report list - source appropriate icons
 * Allow map to stretch bigger than 50% of screen
-* Add Modernizr and browser test
+* Add Modernizr and browser test (currently not tested on old browsers)
 * Add favicon & Apple touch icon
 * Add Google Analytics
+* Source images from photographer for background images
